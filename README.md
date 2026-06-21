@@ -1,5 +1,7 @@
 # CSE3000 - Experiments and Visualisation Environment
 
+[![DOI](https://zenodo.org/badge/1275994806.svg)](https://doi.org/10.5281/zenodo.20784947)
+
 Encoding experiments on beam-prediction task plus the Streamlit dashboard that visualises their results, all in one repository. 
 
 Running an experiment writes result CSVs into `results/`, the folder the dashboard reads, so new results appear in the app with a refresh.
