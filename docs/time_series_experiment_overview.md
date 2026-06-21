@@ -26,7 +26,10 @@ Real-world co-located GPS + mmWave measurements. A vehicle (**unit2**) carrying 
 drives past a fixed base station (**unit1**) with a 64-beam mmWave array; at each sample unit1
 sweeps its codebook and records the received power per beam.
 
-- **Scenarios:** 1, 2, 3, 5, 6, 7, 8, 9. *Scenario 4 is excluded* (no beam target).
+- **Scenarios:** 1, 2, 3, 4, 5, 6, 7, 8, 9. *Scenario 4 ships no `unit1_beam_index` column*, so
+  its target is derived automatically: the beam with the highest received power
+  (`argmax(unit1_pwr_60ghz) + 1`, 1-indexed) is labelled the optimal beam, exactly matching the
+  beam-index definition used in every other scenario.
 - **Sequences (`seq_index`):** individual drives; consecutive samples within a drive are
   milliseconds apart and nearly identical - the reason the split is sequence-grouped (§4).
 - **Base features:** `unit2_lat`, `unit2_lon`, plus the GPS-quality columns a scenario provides
