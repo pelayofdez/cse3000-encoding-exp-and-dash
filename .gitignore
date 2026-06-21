@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Virtual envs / caches
+.venv/
+.uv-cache/
+numba_cache/
+_nbtools/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Datasets (large; contains a recursive symlink - download separately, see README)
+datasets/
+
+# Experiment run artifacts. The flat result CSVs (results/*.csv) and the
+# representation_probes/ CSVs ARE tracked so the dashboard works on a fresh clone;
+# the bulky per-run provenance and split labels are regenerable, so they are not.
+results/
+representation_probes/
+encoding_previews/
+*.log
+
+# Auto generated configs
+configs/

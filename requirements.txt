@@ -1,0 +1,15 @@
+# Dashboard (Streamlit app)
+streamlit>=1.40
+altair>=5.0
+
+# Experiments - core
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
+scipy>=1.10   # paired Wilcoxon signed-rank significance tests (encoding_experiments.significance)
+PyYAML>=6.0
+utm>=0.7
+
+# Experiments - optional downstream models
+xgboost>=2.0   # required only for the `xgboost` model
+torch>=2.0     # required only for the `morais_nn` model (Morais et al. 2022; CPU build is enough)
